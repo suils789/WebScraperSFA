@@ -1,0 +1,101 @@
+<!doctype html>
+
+<head>
+    <title>Google Web Scraping tool</title>
+</head>
+
+{% if message %}
+  <h4>{{message}}!</h4>
+{% endif %}
+
+
+<body>
+    <div class="title">
+        <h1>Google Scraper</h1>
+    </div>
+<html>
+   <body>
+    
+      <form action="{{url_for('mergingData') }}" method = "POST" 
+         enctype = "multipart/form-data">
+         <label for="database">Select the database you want to match:</label>
+         <input type="file" name="data" required='true' /><br/>
+        <br/>
+
+        <p>Choose States:</p>
+        <input type="checkbox" name="states" value="AL">AL
+        <input type="checkbox" name="states" value="AK">AK 
+        <input type="checkbox" name="states" value="AS">AS 
+        <input type="checkbox" name="states" value="AZ">AZ
+        <input type="checkbox" name="states" value="AR">AR </br>
+        <input type="checkbox" name="states" value="CA">CA 
+        <input type="checkbox" name="states" value="CO">CO 
+        <input type="checkbox" name="states" value="CT">CT 
+        <input type="checkbox" name="states" value="DE">DE 
+        <input type="checkbox" name="states" value="DC">DC 
+        <input type="checkbox" name="states" value="FL">FL 
+        <input type="checkbox" name="states" value="GA">GA
+        <input type="checkbox" name="states" value="GU">GU
+        <input type="checkbox" name="states" value="HI">HI </br>
+        <input type="checkbox" name="states" value="ID">ID
+        <input type="checkbox" name="states" value="IL">IL
+        <input type="checkbox" name="states" value="IN">IN
+        <input type="checkbox" name="states" value="IA">IA
+        <input type="checkbox" name="states" value="KS">KS
+        <input type="checkbox" name="states" value="KY">KY
+        <input type="checkbox" name="states" value="LA">LA </br>
+        <input type="checkbox" name="states" value="ME">ME
+        <input type="checkbox" name="states" value="MD">MD
+        <input type="checkbox" name="states" value="MH">MH
+        <input type="checkbox" name="states" value="MA">MA
+        <input type="checkbox" name="states" value="MI">MI
+        <input type="checkbox" name="states" value="FM">FM
+        <input type="checkbox" name="states" value="MN">MN
+        <input type="checkbox" name="states" value="MS">MS
+        <input type="checkbox" name="states" value="MO">MO
+        <input type="checkbox" name="states" value="MT">MT </br>
+        <input type="checkbox" name="states" value="NC">NC
+        <input type="checkbox" name="states" value="NE">NE
+        <input type="checkbox" name="states" value="NV">NV
+        <input type="checkbox" name="states" value="NH">NH
+        <input type="checkbox" name="states" value="NJ">NJ
+        <input type="checkbox" name="states" value="NM">NM
+        <input type="checkbox" name="states" value="NY">NY
+        <input type="checkbox" name="states" value="ND">ND
+        <input type="checkbox" name="states" value="MP">MP
+        <input type="checkbox" name="states" value="OH">OH </br>
+        <input type="checkbox" name="states" value="OK">OK
+        <input type="checkbox" name="states" value="OR">OR
+        <input type="checkbox" name="states" value="PW">PW
+        <input type="checkbox" name="states" value="PA">PA
+        <input type="checkbox" name="states" value="PR">PR
+        <input type="checkbox" name="states" value="RI">RI
+        <input type="checkbox" name="states" value="SC">SC
+        <input type="checkbox" name="states" value="SD">SD
+        <input type="checkbox" name="states" value="TN">TN
+        <input type="checkbox" name="states" value="TX">TX </br>
+        <input type="checkbox" name="states" value="UT">UT
+        <input type="checkbox" name="states" value="VT">VT
+        <input type="checkbox" name="states" value="VA">VA
+        <input type="checkbox" name="states" value="VI">VI
+        <input type="checkbox" name="states" value="WA">WA
+        <input type="checkbox" name="states" value="WV">WV
+        <input type="checkbox" name="states" value="WI">WI
+        <input type="checkbox" name="states" value="WY">WY
+        <br/>
+        <br/>
+        <br/>
+        <label for="tag_search">Enter Keywords(split keywords by comma)</label>
+        <input type="text" name="description" required='true' /><br />
+
+        <br/>
+        <br/>
+        <form method="post" enctype="multipart/form-data" action="{{url_for('mergingData') }}">
+        <label for="tag_search">number of urls per search</label>
+        <input type="text" name="number" required='true' /><br />
+        <input type="submit" value="Search" />
+      </form>
+      
+   </body>
+</html>
+</body>
